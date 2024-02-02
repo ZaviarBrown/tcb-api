@@ -23,9 +23,10 @@ const getPage = async (params: { slug: string }) => {
 
         content = content.slice(end);
 
-        start = content.indexOf("https://cdn.onepiecechapters.com");
+        content = content.slice(
+            content.indexOf("https://cdn.onepiecechapters.com"),
+        );
 
-        content = content.slice(start);
         start = content.indexOf("https://cdn.onepiecechapters.com");
     }
     return imgURLs;

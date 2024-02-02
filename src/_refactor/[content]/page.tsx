@@ -3,7 +3,10 @@
 import Link from "next/link";
 import { useParams } from "next/navigation";
 
-export default function Page() {
+const op = "https://tcb.abhayaby.com/mangas/5/one-piece";
+const jjk = "https://tcb.abhayaby.com/mangas/4/jujutsu-kaisen";
+
+export default function Index() {
     const { content } = useParams();
     return (
         <>

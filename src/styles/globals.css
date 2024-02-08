@@ -6,3 +6,27 @@ html {
     background-color: black;
     color: white;
 }
+
+.cp {
+    clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
+}
+
+.cp-1 {
+    clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+}
+
+.cp-2 {
+    clip-path: polygon(0 0, 100% 0%, 100% 68%, 0% 80%);
+}
+
+.cp-3 {
+    clip-path: polygon(0 16%, 100% 7%, 100% 90%, 0 97%);
+}
+
+.cp-4 {
+    clip-path: polygon(0 11%, 100% 0, 100% 100%, 0 100%);
+}
+
+.cp-5 {
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+}

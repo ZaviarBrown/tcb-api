@@ -1,4 +1,5 @@
 import Image from "next/image";
+import LoadChapter from "~/components/LoadChapter";
 
 const getPanels = (fullPage: string) => {
     const regex = /https:\/\/cdn.onepiecechapters.com.*?.jpg/g;
@@ -42,5 +43,5 @@ export default async function Chapter({
 }) {
     const imgUrls = await getChapter(params);
 
-    return <div className="flex flex-col items-center">{imgUrls}</div>;
+    return <LoadChapter chapters={imgUrls} />;
 }

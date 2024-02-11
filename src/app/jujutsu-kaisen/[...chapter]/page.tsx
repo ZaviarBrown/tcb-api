@@ -7,7 +7,6 @@ const getPanels = (fullPage: string) => {
 
     const imgUrls = fullPage.match(regex);
 
-    console.log(imgUrls);
     if (imgUrls) return imgUrls;
     else return null;
 };

@@ -8,7 +8,6 @@ const getChapterList = async () => {
 
     const chapters = fullPage.match(regex);
 
-    console.log(chapters);
     if (chapters) return chapters.reverse();
     else return null;
 };

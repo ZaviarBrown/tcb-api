@@ -1,7 +1,6 @@
 import Image from "next/image";
 
-const getPage = async (params: { slug: string }) => {
-    console.log(params);
+const getPage = async () => {
     const res = await fetch(
         "https://tcb.abhayaby.com/chapters/1899/jujutsu-kaisen-chapter-61-review-1688065291?date=31-1-2024-2",
     );
@@ -32,8 +31,8 @@ const getPage = async (params: { slug: string }) => {
     return imgURLs;
 };
 
-export default async function Page({ params }: { params: { slug: string } }) {
-    const page = await getPage(params);
+export default async function Page() {
+    const page = await getPage();
 
     return (
         <>

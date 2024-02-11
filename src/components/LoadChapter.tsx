@@ -5,12 +5,12 @@ import BlankPanel from "./BlankPanel";
 export default function LoadChapter({
     chapters,
 }: {
-    chapters: JSX.Element[] | null;
+    chapters: JSX.Element | null;
 }) {
     const [showLoading, setShowLoading] = useState(true);
 
     useEffect(() => {
-        const timeout = setTimeout(() => setShowLoading(false), 1500);
+        const timeout = setTimeout(() => setShowLoading(false), 2000);
 
         return () => clearTimeout(timeout);
     }, [chapters]);
@@ -18,12 +18,7 @@ export default function LoadChapter({
     return (
         <div className="flex flex-col items-center relative">
             {showLoading && (
-                <div>
-                    className=
-                    {`
-                w-full h-screen absolute top-0
-                 ${showLoading ? "opacity-0" : "opacity-100"} duration-500
-                 `}
+                <div className={`w-full h-screen top-0`}>
                     <BlankPanel />
                 </div>
             )}

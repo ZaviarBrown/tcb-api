@@ -20,10 +20,8 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={`font-sans ${inter.variable}`}>
-                <main className="flex min-h-screen flex-col items-center justify-center text-white">
-                    {children}
-                </main>
+            <body className="flex w-screen flex-col justify-center text-white">
+                {children}
             </body>
         </html>
     );

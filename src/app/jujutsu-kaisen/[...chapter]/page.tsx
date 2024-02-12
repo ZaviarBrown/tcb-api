@@ -36,7 +36,7 @@ const getChapter = async (params: { chapter: string[] }) => {
                       src={src}
                       key={i}
                       alt={`Page ${i + 1} of chapter`}
-                      className="max-h-screen w-fit"
+                      className="w-5/6"
                       width={1000}
                       height={1000}
                   />
@@ -47,7 +47,7 @@ const getChapter = async (params: { chapter: string[] }) => {
         ? [
               <Link
                   key={"home"}
-                  className="border-r border-slate-500 px-5"
+                  className="border-r break-words px-2 border-slate-500 "
                   href={"/"}
               >
                   Home
@@ -55,8 +55,12 @@ const getChapter = async (params: { chapter: string[] }) => {
               ...navigation.slice(0, navigation.length / 2).map((url, i) => {
                   if (url.includes("mangas")) {
                       return (
-                          <Link className="px-5" key={i} href="/jujutsu-kaisen">
-                              All Chapters
+                          <Link
+                              className="break-words px-2"
+                              key={i}
+                              href="/jujutsu-kaisen"
+                          >
+                              All
                           </Link>
                       );
                   }
@@ -65,7 +69,7 @@ const getChapter = async (params: { chapter: string[] }) => {
                       return (
                           <Link
                               key={i}
-                              className="border-r border-slate-500 px-5"
+                              className="border-r break-words px-2 border-slate-500 "
                               href={`/jujutsu-kaisen${url}`}
                           >
                               Prev
@@ -76,7 +80,7 @@ const getChapter = async (params: { chapter: string[] }) => {
                   if (url.includes("chapters")) {
                       return (
                           <Link
-                              className="px-5 border-l border-slate-500"
+                              className="break-words px-2 border-l border-slate-500"
                               key={i}
                               href={`/jujutsu-kaisen${url}`}
                           >
@@ -91,11 +95,11 @@ const getChapter = async (params: { chapter: string[] }) => {
     if (imgUrls && navigation) {
         return (
             <>
-                <nav className="flex text-xl bg-[#1C1C1E] border border-slate-200 rounded-lg px-4 p-2 m-5">
+                <nav className="flex gap-2 shrink bg-[#1C1C1E] border border-slate-200 rounded-lg p-2 m-5">
                     {nav}
                 </nav>
                 {panels}
-                <nav className="flex text-xl bg-[#1C1C1E] border border-slate-200 rounded-lg px-4 p-2 m-5">
+                <nav className="flex gap-2 shrink bg-[#1C1C1E] border border-slate-200 rounded-lg p-2 m-5">
                     {nav}
                 </nav>
             </>

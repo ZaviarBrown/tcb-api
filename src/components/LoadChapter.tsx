@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import BlankPanel from "./BlankPanel";
+// import BlankPanel from "./BlankPanel";
+import { PacmanLoader } from "react-spinners";
 export default function LoadChapter({
     chapters,
 }: {
@@ -16,19 +17,20 @@ export default function LoadChapter({
     }, [chapters]);
 
     return (
-        <div className="flex flex-col items-center relative">
+        <>
             {showLoading && (
-                <div className={`w-full h-screen top-0`}>
-                    <BlankPanel />
+                <div className="absolute top-1/3">
+                    <PacmanLoader size={50} color="#36d7b7" />
                 </div>
             )}
+
             <div
                 className={`
-        flex flex-col items-center transition-opacity
-        ${showLoading ? "opacity-0" : "opacity-100"} duration-500`}
+                    flex flex-col items-center transition-opacity
+                    ${showLoading ? "opacity-0" : "opacity-100"} duration-500`}
             >
                 {chapters}
             </div>
-        </div>
+        </>
     );
 }

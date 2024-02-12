@@ -3,7 +3,7 @@ import Link from "next/link";
 import LoadChapter from "~/components/LoadChapter";
 
 const getPanels = (fullPage: string) => {
-    const regex = /https:\/\/cdn.onepiecechapters.com.*?.jpg/g;
+    const regex = /https:\/\/cdn.onepiecechapters.com.*?\.(jpg|png)/g;
 
     const imgUrls = fullPage.match(regex);
 
